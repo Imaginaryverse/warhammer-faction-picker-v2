@@ -547,8 +547,8 @@ const getRandomResult = (obj) => {
     resultImg.src = `${currentBanner}`;
     resultRace.innerHTML = `${currentRace}`;
     resultFaction.innerHTML = `${currentFaction}`;
-  }, 800);
+  }, 1200);
   setTimeout(() => {
     backgroundImg.classList.remove('animation');
-  }, 1500);
+  }, 1700);
 };
