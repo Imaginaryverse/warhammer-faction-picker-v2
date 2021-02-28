@@ -459,5 +459,9 @@ body {
     max-height: 1366px;
     max-width: 1024px;
   }
+  .result-container__race {
+    max-width: 90%;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
