@@ -533,9 +533,9 @@ const getRandomResult = (obj) => {
   const randomFaction = randomRaceFactions[randomFactionKey];
 
   const currentRace = randomFaction.race;
-  const currentBackground = obj[randomRace].background;
-  const currentFaction = randomFaction.name;
   const currentBanner = randomFaction.banner;
+  const currentFaction = randomFaction.name;
+  const currentBackground = obj[randomRace].background;
 
   resultContainer.classList.add('animation');
   backgroundImg.classList.add('animation');
@@ -543,10 +543,10 @@ const getRandomResult = (obj) => {
     resultContainer.classList.remove('animation');
 
     // Render Results
-    backgroundImg.src = `${currentBackground}`;
     resultImg.src = `${currentBanner}`;
     resultRace.innerHTML = `${currentRace}`;
     resultFaction.innerHTML = `${currentFaction}`;
+    backgroundImg.src = `${currentBackground}`;
   }, 1200);
   setTimeout(() => {
     backgroundImg.classList.remove('animation');
