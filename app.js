@@ -366,34 +366,8 @@ const races = {
   },
 };
 
-/* const imgQueue = new createjs.LoadQueue();
-
-imgQueue.on('complete', handleComplete, this);
-imgQueue.loadManifest([
-  { id: 'beastmen', src: 'backgrounds/beastmen-bg.jpg' },
-  { id: 'bretonnia', src: 'backgrounds/bretonnia-bg.jpg' },
-  { id: 'darkElves', src: 'backgrounds/dark-elves-bg.jpg' },
-  { id: 'dwarfs', src: 'backgrounds/dwarfs-bg.jpg' },
-  { id: 'empire', src: 'backgrounds/empire-bg.png' },
-  { id: 'greenskins', src: 'backgrounds/greenskins-bg.jpg' },
-  { id: 'highElves', src: 'backgrounds/high-elves-bg.jpg' },
-  { id: 'lizardmen', src: 'backgrounds/lizardmen-bg.png' },
-  { id: 'norsca', src: 'backgrounds/norsca-bg.png' },
-  { id: 'skaven', src: 'backgrounds/skaven-bg.jpg' },
-  { id: 'tombKings', src: 'backgrounds/tomb-kings-bg.jpg' },
-  { id: 'vampireCoast', src: 'backgrounds/vampire-coast-bg.jpg' },
-  { id: 'vampireCounts', src: 'backgrounds/vampire-counts-bg.jpg' },
-  { id: 'warriorsOfChaos', src: 'backgrounds/warriors-of-chaos-bg.jpg' },
-  { id: 'woodElves', src: 'backgrounds/wood-elves-bg.jpg' },
-]);
-
-function handleComplete() {
-  const beastmen = imgQueue.getResult('beastmen');
-  const bretonnia = imgQueue.getResult('bretonnia');
-  console.log('LOAD COMPLETE');
-} */
-
 /* VARIABLES */
+
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 const topBar = document.querySelector('.top-bar');
 const midBar = document.querySelector('.mid-bar');
@@ -437,9 +411,35 @@ uncheckAllBtn.addEventListener('click', (e) => {
   updateSearchBtnState();
 });
 
+// resultContainer
+resultContainer.addEventListener('click', () => {
+  toggleHamburger(true);
+});
+
+// resultRace
+resultRace.addEventListener('click', () => {
+  toggleHamburger(true);
+});
+
+// resultFaction
+resultFaction.addEventListener('click', () => {
+  toggleHamburger(true);
+});
+
+// resultImg
+resultImg.addEventListener('click', () => {
+  toggleHamburger(true);
+});
+
+// searchBtnContainer
+searchBtnContainer.addEventListener('click', () => {
+  toggleHamburger(true);
+});
+
 // searchBtn
 searchBtn.addEventListener('click', () => {
   updateAppLayout();
+  toggleHamburger(true);
 
   const filteredRaces = filterRaces();
 
@@ -448,12 +448,20 @@ searchBtn.addEventListener('click', () => {
 
 /* FUNCTIONS */
 // toggleHamburgerBtn
-const toggleHamburger = () => {
-  hamburgerBtn.classList.toggle('active');
-  topBar.classList.toggle('active');
-  midBar.classList.toggle('active');
-  bottomBar.classList.toggle('active');
-  formContainer.classList.toggle('active');
+const toggleHamburger = (forceClose) => {
+  if (forceClose) {
+    hamburgerBtn.classList.remove('active');
+    topBar.classList.remove('active');
+    midBar.classList.remove('active');
+    bottomBar.classList.remove('active');
+    formContainer.classList.remove('active');
+  } else {
+    hamburgerBtn.classList.toggle('active');
+    topBar.classList.toggle('active');
+    midBar.classList.toggle('active');
+    bottomBar.classList.toggle('active');
+    formContainer.classList.toggle('active');
+  }
 };
 
 // updateUncheckAllBtnState
