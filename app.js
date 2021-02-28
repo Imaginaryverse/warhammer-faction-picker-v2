@@ -538,13 +538,17 @@ const getRandomResult = (obj) => {
   const currentBanner = randomFaction.banner;
 
   resultContainer.classList.add('animation');
+  backgroundImg.classList.add('animation');
   setTimeout(() => {
     resultContainer.classList.remove('animation');
-  }, 800);
 
-  // Render Results
-  backgroundImg.src = `${currentBackground}`;
-  resultImg.src = `${currentBanner}`;
-  resultRace.innerHTML = `${currentRace}`;
-  resultFaction.innerHTML = `${currentFaction}`;
+    // Render Results
+    backgroundImg.src = `${currentBackground}`;
+    resultImg.src = `${currentBanner}`;
+    resultRace.innerHTML = `${currentRace}`;
+    resultFaction.innerHTML = `${currentFaction}`;
+  }, 800);
+  setTimeout(() => {
+    backgroundImg.classList.remove('animation');
+  }, 1500);
 };
