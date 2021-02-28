@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+
+    <!-- <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script> -->
+
+    <title>WHFP v2</title>
+  </head>
+  <body>
+    <main class="app">
+      <!-- BACKGROUND -->
+      <div class="background-container">
+        <img class="background-img" src="" />
+      </div>
+
+      <nav class="navbar">
+        <div class="title-hamburger-container">
+          <span class="navbar__title">Random Faction Picker</span>
+          <button class="hamburger-btn">
+            <div class="hamburger-bar top-bar"></div>
+            <div class="hamburger-bar mid-bar"></div>
+            <div class="hamburger-bar bottom-bar"></div>
+          </button>
+        </div>
+        <div class="form-container">
+          <form class="form-container__form">
+            <fieldset>
+              <legend>Select races to exclude:</legend>
+              <div class="fieldset-grid">
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="beastmen"
+                    value="beastmen"
+                  />
+                  <label for="beastmen">Beastmen</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="bretonnia"
+                    value="bretonnia"
+                  />
+                  <label for="bretonnia">Bretonnia</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="dark elves"
+                    value="darkElves"
+                  />
+                  <label for="dark elves">Dark Elves</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="dwarfs"
+                    value="dwarfs"
+                  />
+                  <label for="dwarfs">Dwarfs</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="empire"
+                    value="empire"
+                  />
+                  <label for="empire">Empire</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="greenskins"
+                    value="greenskins"
+                  />
+                  <label for="greenskins">Greenskins</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="high elves"
+                    value="highElves"
+                  />
+                  <label for="high elves">High Elves</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="lizardmen"
+                    value="lizardmen"
+                  />
+                  <label for="lizardmen">Lizardmen</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="norsca"
+                    value="norsca"
+                  />
+                  <label for="norsca">Norsca</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="skaven"
+                    value="skaven"
+                  />
+                  <label for="skaven">Skaven</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="tomb kings"
+                    value="tombKings"
+                  />
+                  <label for="tomb kings">Tomb Kings</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="vampire coast"
+                    value="vampireCoast"
+                  />
+                  <label for="vampire coast">Vampire Coast</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="vampire counts"
+                    value="vampireCounts"
+                  />
+                  <label for="vampire counts">Vampire Counts</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="warriors of chaos"
+                    value="warriorsOfChaos"
+                  />
+                  <label for="warriors of chaos">Warriors of Chaos</label>
+                </div>
+                <div class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="wood elves"
+                    value="woodElves"
+                  />
+                  <label for="wood elves">Wood Elves</label>
+                </div>
+              </div>
+              <div class="check-btns-container">
+                <button class="check-all-btn">Check All</button>
+                <button class="uncheck-all-btn" disabled>Uncheck All</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </nav>
+
+      <!-- RESULTS -->
+      <div class="result-container start">
+        <span class="result-container__race"></span>
+        <img class="result-container__img" src="" />
+        <span class="result-container__faction"></span>
+      </div>
+
+      <!-- SEARCH BTN -->
+      <div class="search-btn-container start">
+        <button class="search-btn">Search</button>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
