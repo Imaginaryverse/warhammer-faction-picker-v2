@@ -502,7 +502,7 @@ const uncheckAllCheckboxes = (e) => {
 
 // filterRaces
 const filterRaces = () => {
-  const racesFiltered = races;
+  const racesFiltered = { ...races };
 
   formCheckbox.forEach((box) => {
     const race = box.value;
